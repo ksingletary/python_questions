@@ -13,3 +13,8 @@ def intersection(l1, l2):
         >>> intersection([1, 2, 3], [4, 5, 6])
         []
     """
+    new_set1 = set(l1)
+    new_set2 = set(l2)
+
+    return list(new_set1 & new_set2)
+print(intersection([1, 2, 3], [1, 2, 3, 4]))

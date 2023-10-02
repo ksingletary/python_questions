@@ -16,3 +16,19 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    my_list = []
+    for char in a[0:2]:
+        my_list.append(char)
+
+    for char in b[0:2]:
+        my_list.append(char)
+        
+    my_list.extend(a[2])
+    my_list.extend(b[2])
+
+    if len(set(my_list)) == len(my_list):
+        return False
+    return True
+    
+
+print(friend_date(('Elmo', 5, ['hugging', 'being nice']), ('Sauron', 5000, ['killing hobbits', 'chess'])))

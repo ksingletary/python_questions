@@ -30,3 +30,14 @@ def includes(collection, sought, start=None):
         >>> includes({"apple": "red", "berry": "blue"}, "blue")
         True
     """
+    # pretty much if statements pertaining to each data structure type
+
+    if isinstance(collection, dict):
+        return sought in collection.values()
+
+    if start is None or isinstance(collection, set):
+        return sought in collection
+
+    return sought in collection[start:]
+
+print(includes({"apple": "red", "berry": "blue"}, "blue"))

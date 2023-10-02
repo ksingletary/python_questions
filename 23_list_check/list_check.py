@@ -7,3 +7,12 @@ def list_check(lst):
         >>> list_check([[1], "nope"])
         False
     """
+    my_list = []
+    for item in lst:
+        if (isinstance(item, list)):
+            my_list.append(item)
+        if len(my_list) == len(lst):
+            return True
+    return False
+
+print(list_check([[1], [2, 3]]))
